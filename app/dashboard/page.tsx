@@ -10,7 +10,12 @@ import {
   CardsSkeleton
 } from '@/app/ui/skeletons';
 import CardWrapper from '@/app/ui/dashboard/cards'
- 
+import { Metadata } from 'next';
+
+export const metadata: Metadata = {
+    title: 'Admin',
+};
+
 export default async function Page() {
     const revenue = await fetchRevenue();
     return (
